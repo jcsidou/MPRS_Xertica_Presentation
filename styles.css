@@ -161,14 +161,7 @@
 }
 @media (max-width: 700px) {
     .ciclo-svg-center-main {
-        position: static;
-        left: auto;
-        top: auto;
-        transform: none;
-        margin: 0 auto 20px auto;
-        display: block;
-        width: 120px;
-        height: 120px;
+        display: none !important;
     }
     .ciclo-svg {
         width: 120px !important;
@@ -777,6 +770,14 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+}
+
+@media (max-width: 900px) {
+  .destaque-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
 }
 
 .destaque-title {
