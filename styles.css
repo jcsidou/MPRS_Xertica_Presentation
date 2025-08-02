@@ -1,3 +1,45 @@
+
+/* Ícones de funcionalidades destacados - aparência padronizada */
+.destaque-title i[class^="destaque-icon-"],
+.destaque-title i[class*=" destaque-icon-"] {
+  background: #ff9900;
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-right: 0.5em;
+  box-shadow: 0 2px 8px #ff990033;
+  border: none;
+  min-width: 36px;
+  min-height: 36px;
+  max-width: 36px;
+  max-height: 36px;
+  line-height: 1;
+  vertical-align: middle;
+}
+/* Ícones personalizados para funcionalidades */
+.destaque-icon-coleta {
+  color: #007bff;
+}
+.destaque-icon-rotulagem {
+  color: #28a745;
+}
+.destaque-icon-sumarizacao {
+  color: #ffc107;
+}
+.destaque-icon-chatbot {
+  color: #17a2b8;
+}
+.destaque-icon-encaminhamento {
+  color: #6f42c1;
+}
+.destaque-icon-redacao {
+  color: #fd7e14;
+}
 /* Cards de características do conjunto (estilo igual aos benefícios) */
 .caracteristicas-grid {
     display: grid;
@@ -753,7 +795,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Funcionalidades Section */
 .funcionalidades {
-    padding: 100px 0;
+    /* padding: 100px 0; */
     background: #f8fafc;
 }
 
@@ -801,11 +843,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px;
     border-radius: 50%;
 }
-.destaque-description {
+.destaque-description, .destaque-description-list {
     font-size: 1.1rem;
     color: #64748b;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     line-height: 1.7;
+}
+
+.destaque-description-list {
+    margin-left: 25px;
 }
 
 .destaque-features {
@@ -1184,24 +1230,24 @@ h1, h2, h3, h4, h5, h6 {
 .caracteristica-card {
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 12px #ff990022;
+    box-shadow: 2px 2px 12px #ff990022;
     padding: 2rem 1.2rem 1.2rem 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: box-shadow 0.2s, transform 0.2s;
-    border-left: 5px solid #ff9900;
+    border-left: 5px solid transparent;
 }
 
 .caracteristica-card:hover {
     box-shadow: 0 4px 24px #ff990044;
     transform: translateY(-4px) scale(1.03);
+    border-left: 5px solid #ff9900;
 }
 
 .caracteristica-icon {
     font-size: 2.2rem;
-    color: #ff9900;
+    /* color: #ff9900; */
     margin-bottom: 1rem;
 }   
-}

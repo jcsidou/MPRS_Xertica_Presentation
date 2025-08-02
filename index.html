@@ -315,6 +315,18 @@
                             </p>
                         </div>
                     </div>
+                    <div class="caracteristica-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="beneficio-content">
+                            <h4>Integração com o sistemas internos</h4>
+                            <p>A integração com os sistemas internos do MPRS permite que o usuário acesse informações
+                                relevantes de forma rápida e eficiente, sem a necessidade de alternar entre diferentes
+                                plataformas.
+                            </p>    
+                        </div>
+                    </div>
                     <div class="caracteristica-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="caracteristica-icon">
                             <i class="fas fa-lock"></i>
@@ -360,12 +372,12 @@
                     </div>
                 </div>
             </div>
-            <h3>
+            <h2>
                 Esquema Geral de Arquitetura da Aplicação
-            </h3>
+            </h2>
             <!-- Animação do Fluxo de Processo -->
             <div class="fluxo-processo-animacao" style="display:flex;justify-content:center;margin-bottom:2rem;">
-                <svg id="svg-fluxo-animado" viewBox="0 0 1000 350" width="98%" height="auto"
+                <svg id="svg-fluxo-animado" viewBox="0 0 1000 350" width="98%" height="350px"
                     style="max-width:1000px;min-width:320px;">
                     <!-- Grupo Sistemas Judiciais (nuvem) -->
                     <g font-family="Inter,sans-serif" font-size="16" text-anchor="middle">
@@ -518,31 +530,31 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-coleta fas fa-database"></i>
                                 Coleta de Insumos
                             </h5>
                             <p class="destaque-description">
                                 Coleta automática de insumos relevantes do ponto de vista institucional:
-                            <ul>
-                                <li>Audiências designadas</li>
-                                <li>Georreferenciamento de fatos</li>
-                                <li>Identificação das partes</li>
-                                <li>Coleta de Endereços</li>
-                                <li>Teor de decisões</li>
-                                <li>Similaridade processual</li>
-                                <li>Bens apreendidos</li>
-                            </ul>
+                                <ul class="destaque-description-list">
+                                    <li>Audiências designadas</li>
+                                    <li>Georreferenciamento de fatos</li>
+                                    <li>Identificação das partes</li>
+                                    <li>Coleta de Endereços</li>
+                                    <li>Teor de decisões</li>
+                                    <li>Similaridade processual</li>
+                                    <li>Bens apreendidos</li>
+                                </ul>
                             </p>
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-rotulagem fas fa-tags"></i>
                                 Rotulagem Inteligente
                             </h5>
                             <p class="destaque-description">
                                 Aplicação automática de rótulos e tags para categorizar os expedientes, facilitando a
                                 organização do trabalho.
-                            <ul>
+                            <ul class="destaque-description-list">
                                 <li>Situações de Mera Ciência</li>
                                 <li>Casos Merecedores de Atenção</li>
                                 <li>Finalidade da intimação/vista</li>
@@ -555,12 +567,12 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-sumarizacao fas fa-file-alt"></i>
                                 Sumarização Completa
                             </h5>
                             <p class="destaque-description">
                                 Geração de resumos precisos e relevantes a partir de documentos extensos.
-                            <ul>
+                            <ul class="destaque-description-list">
                                 <li>Sumarização de TODOS os documentos do processo</li>
                                 <li>Sumarização de conteúdo multimídia</li>
                                 <li>Galeria de vídeos integrada com ferramenta de transcrição</li>
@@ -571,13 +583,13 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-chatbot fas fa-comments"></i>
                                 Agente Conversacional
                             </h5>
                             <p class="destaque-description">
                                 Esclarecimento de dúvidas e sugestões de encaminhamentos através de um chatbot
                                 inteligente.
-                            <ul>
+                            <ul class="destaque-description-list">
                                 <li>Interação em linguagem natural</li>
                                 <li>Sugestões de perguntas comuns para a situação</li>
                                 <li>Maior assertividade por lidar com metadados</li>
@@ -587,13 +599,13 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-encaminhamento fas fa-share-square"></i>
                                 Sugestão de Encaminhamento
                             </h5>
                             <p class="destaque-description">
                                 Sugere ao usuário o encaminhamento mais adequado para o expediente, considerando as
                                 melhores práticas e precedentes.
-                            <ul>
+                            <ul class="destaque-description-list">
                                 <li>Primeiro momento de tomada de decisão no fluxo</li>
                                 <li>Identifica padrões do usuário para sugerir</li>
                                 <li>Sugere o encaminhamento a partir de padrões genéricos ou do responsável</li>
@@ -603,12 +615,12 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-redacao fas fa-pen-fancy"></i>
                                 Redação de Minutas
                             </h5>
                             <p class="destaque-description">
                                 Geração de minutas de peças processuais.
-                            <ul>
+                            <ul class="destaque-description-list">
                                 <li>Modelo fornecido para o caso específico </li>
                                 <li>Modelos fornecidos pelo usuário para situações análogas</li>
                                 <li>Modelos da casa, a partir de plataforma colaborativa</li>
@@ -672,7 +684,7 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-qualidade fas fa-check-circle"></i>
                                 Alta qualidade
                             </h5>
                             <p class="destaque-description">
@@ -685,7 +697,7 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-agilidade fas fa-bolt"></i>
                                 Agilidade
                             </h5>
                             <p class="destaque-description">
@@ -698,12 +710,12 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-coleta fas fa-database"></i>
                                 Coleta de insumos
                             </h5>
                             <p class="destaque-description">
                                 Trazemos ao usuário uma série de insumos relevantes, como:
-                            <ul>
+                            <ul class="destaque-description-list">
                                 <li>Identificação de sentimentos do depoente</li>
                                 <li>Identificação de vieses cognitivos</li>
                                 <li>Identificação de pessoas apontadas pelo depoente como participantes da infração
@@ -716,11 +728,11 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-chatbot fas fa-comments"></i>
                                 Integração com Chatbot
                             </h5>
                             <p class="destaque-description">
-                                O chatbot pode responder perguntas sobre o conteúdo do vídeo, facilitando a consulta e
+                                Um chatbot especializado pode responder perguntas sobre o conteúdo do vídeo, facilitando a consulta e
                                 análise do material.
                                 Agora, é <strong>fácil e rápido ter acesso às informações contidas nos vídeos</strong>,
                                 sem a necessidade de assistir a todo o conteúdo, mesmo em sala de audiência.
@@ -767,7 +779,7 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-enderecos fas fa-map-marker-alt"></i>
                                 Endereços
                             </h5>
                             <p class="destaque-description">
@@ -777,10 +789,13 @@
                                 Ela permite a identificação de endereços relevantes para os expedientes, facilitando o
                                 trabalho dos usuários e garantindo que as informações estejam sempre atualizadas e
                                 precisas.
-                                Mas ela não pesquisa endereços apenas nas bases já disponíveis: agindo integrada com a
-                                ferramenta de análise e sumarização, ela coleta endereços diretamente dos expedientes,
-                                garantindo que o usuário tenha acesso às informações mais relevantes e atualizadas.
                             </p>
+                        </div>
+                        <div>
+                            <h5 class="destaque-title">
+                                <i class="destaque-icon-preditividade fas fa-bell"></i>
+                                Preditividade de Endereços
+                            </h5>
                             <p class="destaque-description">
                                 E temos também a <strong> preditividade de endereços</strong>, que verificando
                                 divergênia entre o endereço para o qual expedido um mandado e o endereço provável de seu
@@ -790,13 +805,13 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-escrita fas fa-pen"></i>
                                 Escrita
                             </h5>
                             <p class="destaque-description">
                                 A ferramenta de apoio oferece uma série de funcionalidades para auxiliar na redação de
                                 documentos jurídicos, incluindo:
-                            <ul>
+                            <ul class="destaque-description-list">
                                 <li>Correção ortográfica e gramatical</li>
                                 <li>Redação de ementas</li>
                                 <li>Integração com pesquisa jurisprudencial</li>
@@ -808,18 +823,10 @@
                                 redação, possibilitando auto grau de automação na redação de documentos jurídicos
                                 elaborados naquela plataforma.
                             </p>
-                            <p class="destaque-description">
-                                E o mais importante: ela pode ser acionada mesmo sem a intervenção do usuário. Por
-                                exemplo, ao tentar protocolar uma peça com muitos erros de português, a ferramenta
-                                sugere correções e melhorias, garantindo que o documento esteja sempre em conformidade
-                                com as normas jurídicas. Assim, evita-se o erro na totalidade das peças, em vez de
-                                empregar um grande esforço para identificar por amostragem o que foi protocolado com
-                                problemas.
-                            </p>
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-linguagem fas fa-language"></i>
                                 Assistente de linguagem simples
                             </h5>
                             <p class="destaque-description">
@@ -830,20 +837,11 @@
                                 documentos sejam compreensíveis para todos os públicos, incluindo aqueles que não
                                 possuem formação jurídica.
                             </p>
-                            <p class="destaque-description">
-                                A ferramenta se <strong>integra perfeitamente com as demais ferramentas de apoio e
-                                    pesquisa jurisprudencial</strong>, permitindo que os usuários tenham acesso a
-                                informações relevantes e atualizadas durante o processo de redação.
-                                Assim, por exemplo, alguém que inicia sua carreira jurídica pode apresentar a pesquisa
-                                jurisprudencial em termos absolutamente leigos e obter uma resposta que consiga
-                                compreender.
-                                E também atende o público externo, permitindo que pessoas do povo possam compreender os
-                                documentos jurídicos, promovendo a transparência e o acesso à justiça.
-                            </p>
+
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-roteirizacao fas fa-route"></i>
                                 Roteirização
                             </h5>
                             <p class="destaque-description">
@@ -855,6 +853,21 @@
                                 Isso permite que os usuários economizem tempo e recursos, otimizando suas atividades
                                 externas e melhorando a produtividade e permitindo que se concentrem nas atividades mais
                                 relevantes.
+                            </p>
+                        </div>
+                        <div>
+                            <h5 class="destaque-title">
+                                <i class="destaque-icon-integracao fas fa-link"></i>
+                                Integração total
+                            </h5>
+                            <p class="destaque-description">
+                                As ferramentas de apoio são projetadas para trabalhar em conjunto com as demais
+                                ferramentas de IA, proporcionando uma experiência fluida e eficiente.
+                                <ul class="destaque-description-list">
+                                    <li><strong>Análise de processos:</strong> As ferramentas têm diversas formas de integração: desde o uso de insumos coletados para subsidiar a analise de endereços, à redação de ementas para pareceres.</li>
+                                    <li><strong>Pesquisa jurisprudencial:</strong> A ferramenta de apoio permite a utilização de linguagem simples para a pesquisa jurisprudencial.
+                                    
+                                </ul>
                             </p>
                         </div>
                     </div>
@@ -894,7 +907,7 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-jurisprudencia fas fa-balance-scale"></i>
                                 Pesquisa Jurisprudencial
                             </h5>
                             <p class="destaque-description">
@@ -911,7 +924,7 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-diarios fas fa-newspaper"></i>
                                 Diários Oficiais
                             </h5>
                             <p class="destaque-description">
@@ -928,7 +941,7 @@
                         </div>
                         <div>
                             <h5 class="destaque-title">
-                                <i class="fas fa-star"></i>
+                                <i class="destaque-icon-semantica fas fa-brain"></i>
                                 Pesquisa Semântica
                             </h5>
                             <p class="destaque-description">
@@ -939,6 +952,21 @@
                                 usuários.
                                 Isso permite que os usuários encontrem informações mais relevantes e precisas,
                                 economizando tempo e esforço na busca por dados jurídicos.
+                            </p>
+                        </div>
+                        <div>
+                            <h5 class="destaque-title">
+                                <i class="destaque-icon-integracao fas fa-link"></i>
+                                Integração total
+                            </h5>
+                            <p class="destaque-description">
+                                As ferramentas de pesquisasão projetadas para trabalhar em conjunto com as demais
+                                ferramentas de IA, proporcionando uma experiência fluida e eficiente.
+                                <ul class="destaque-description-list">
+                                    <li><strong>Análise de processos:</strong> permite a consulta de jurisprudência de forma integrada. Enquanto escreve, o usuario pode usar linguagem natural para pesquisar o entendimento jurisprudencial sobre o tema</li>
+                                    <li><strong>Ferramentas de apoio:</strong> A ferramenta de apoio permite a utilização de linguagem simples para a pesquisa jurisprudencial.
+                                    
+                                </ul>
                             </p>
                         </div>
                     </div>
@@ -1189,7 +1217,7 @@
                 <div class="footer-section">
                     <h4 class="footer-title">Contato</h4>
                     <p class="footer-contact">
-                        Uma parceria entre MPRS e Xertica.ai para inovação em IA institucional.
+                        Uma parceria entre MPRS e Xertica.ai para inovação em IA institucional para a área jurídica.
                     </p>
                 </div>
             </div>
