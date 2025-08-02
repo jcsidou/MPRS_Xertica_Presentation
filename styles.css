@@ -1,4 +1,3 @@
-
 /* Ícones de funcionalidades destacados - aparência padronizada */
 .destaque-title i[class^="destaque-icon-"],
 .destaque-title i[class*=" destaque-icon-"] {
@@ -1266,3 +1265,4 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.2rem;
     /* color: #ff9900; */
     margin-bottom: 1rem;
+}   
