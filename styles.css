@@ -1,3 +1,19 @@
+/* Barra de rolagem com cor principal */
+::-webkit-scrollbar-thumb {
+  background: var(--cor_principal) !important;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #b85e0b !important;
+}
+::-webkit-scrollbar {
+  height: 8px;
+  background: #f1f5f9;
+}
+* {
+  scrollbar-color: var(--cor_principal) #f1f5f9;
+  scrollbar-width: thin;
+}
 /* Cards de características do conjunto (estilo igual aos benefícios) */
 .caracteristicas-grid {
     display: grid;
@@ -1201,7 +1217,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .caracteristica-icon {
     font-size: 2.2rem;
-    color: #ff9900;
+    /* color: #ff9900; */
     margin-bottom: 1rem;
 }   
-}
