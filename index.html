@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="language.js"></script>
 </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPRS & Xertica.ai</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
 <body>
     <!-- Header -->
     <header class="header">
@@ -28,10 +22,35 @@
                     <img src="images/xertica_br_logo.jpeg" alt="Xertica.ai" class="logo-xertica">
                 </div>
                 <div class="nav-menu">
-                    <a href="#home" class="nav-link">Início</a>
-                    <a href="#pilares" class="nav-link">Perspectivas</a>
-                    <a href="#funcionalidades" class="nav-link">Funcionalidades</a>
-                    <a href="#contato" class="nav-link">Contato</a>
+                    <a href="#home" class="nav-link" data-translate="nav-home">Início</a>
+                    <a href="#pilares" class="nav-link" data-translate="nav-perspectives">Perspectivas</a>
+                    <a href="#funcionalidades" class="nav-link" data-translate="nav-features">Funcionalidades</a>
+                    <a href="#contato" class="nav-link" data-translate="nav-contact">Contato</a>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <div class="language-dropdown">
+                            <div class="language-current">
+                                <div class="language-flag flag-brazil"></div>
+                                <span>PT</span>
+                                <i class="fas fa-chevron-down" style="font-size: 10px; opacity: 0.7;"></i>
+                            </div>
+                            <div class="language-options">
+                                <button class="language-option active" data-lang="pt" onclick="switchLanguage('pt')">
+                                    <div class="language-flag flag-brazil"></div>
+                                    <span>Português</span>
+                                </button>
+                                <button class="language-option" data-lang="en" onclick="switchLanguage('en')">
+                                    <div class="language-flag flag-usa"></div>
+                                    <span>English</span>
+                                </button>
+                                <button class="language-option" data-lang="es" onclick="switchLanguage('es')">
+                                    <div class="language-flag flag-spain"></div>
+                                    <span>Español</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="nav-toggle">
                     <span></span>
@@ -47,16 +66,16 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="hero-title-main">Ferramentas de Inteligência Artificial</span>
-                    <span class="hero-title-sub">Uma parceria entre MPRS e Xertica.ai</span>
+                    <span class="hero-title-main" data-translate="hero-title-main">Ferramentas de Inteligência Artificial</span>
+                    <span class="hero-title-sub" data-translate="hero-title-sub">Uma parceria entre MPRS e Xertica.ai</span>
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" data-translate="hero-description">
                     Um conjunto integrado de soluções que maximiza o valor da inteligência artificial
                     para a instituição e seus usuários, transformando processos e otimizando resultados.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#pilares" class="btn btn-primary">Conheça as Perspectivas</a>
-                    <a href="#parceria-timeline" class="btn btn-secondary">Linha do Tempo</a>
+                    <a href="#pilares" class="btn btn-primary" data-translate="hero-btn-perspectives">Conheça as Perspectivas</a>
+                    <a href="#parceria-timeline" class="btn btn-secondary" data-translate="hero-btn-timeline">Linha do Tempo</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -78,8 +97,8 @@
     <section id="parceria-timeline" class="parceria-timeline">
         <div class="container" style="position:relative;">
             <div class="parceria-intro" data-aos="fade-up">
-                <h2>Como surgiu a parceria MPRS & Xertica.ai</h2>
-                <p>
+                <h2 data-translate="timeline-title">Como surgiu a parceria MPRS & Xertica.ai</h2>
+                <p data-translate="timeline-intro">
                     Em 2023, o Ministério Público do RS identificou a necessidade de incorporar inteligência artificial
                     em suas rotinas para enfrentar o crescente volume de trabalho. Uma comissão foi criada para avaliar
                     alternativas disponíveis, mas concluiu que as soluções de mercado não atendiam à demanda
@@ -154,9 +173,9 @@
     <section id="necessidades" class="necessidades">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Conclusões da Comissão</h2>
-                <p class="section-subtitle">A diferença entre as necessidades do membro e da instituição</p>
-                <p class="section-description">
+                <h2 class="section-title" data-translate="needs-title">Conclusões da Comissão</h2>
+                <p class="section-subtitle" data-translate="needs-subtitle">A diferença entre as necessidades do membro e da instituição</p>
+                <p class="section-description" data-translate="needs-description">
                     A mais candente conclusão da comissão, foi de que <strong> as necessidades da instituição são mais amplas que as necessidades do membros</strong>.
                 </p>
             </div>
@@ -168,7 +187,7 @@
 
                     </g>
                     <!-- Institucionais -->
-                    <text x="500" y="45" fill="#fff" font-size="24" font-weight="bold">Necessidades institucionais</text>
+                    <text x="500" y="45" fill="#fff" font-size="24" font-weight="bold" data-translate="needs-institutional">Necessidades institucionais</text>
                     <text x="400" y="70" fill="#fff" font-size="16" font-weight="bold">Segurança</text>
                     <text x="600" y="70" fill="#fff" font-size="16" font-weight="bold">Privacidade</text>
                     <text x="300" y="95" fill="#fff" font-size="16" font-weight="bold">Uniformidade</text>
@@ -179,7 +198,7 @@
                     <text x="200" y="120" fill="#fff" font-size="16" font-weight="bold">Estrutura de TI</text>
                     <text x="500" y="120" fill="#fff" font-size="16" font-weight="bold">(...)</text>
                     <!-- Individuais -->
-                    <text x="500" y="170" fill="#fff" font-size="24" font-weight="bold">Necessidades individuais</text>
+                    <text x="500" y="170" fill="#fff" font-size="24" font-weight="bold" data-translate="needs-individual">Necessidades individuais</text>
                     <text x="500" y="195" fill="#fff" font-size="16" font-weight="bold">Transcrição de Videos</text>
                     <text x="500" y="220" fill="#fff" font-size="16" font-weight="bold">Sumarização de Documentos</text>
                     <text x="500" y="245" fill="#fff" font-size="16" font-weight="bold">Redação de Peças</text>
@@ -197,8 +216,8 @@
     <section id="pilares" class="pilares">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Perspectivas para a Transformação com IA</h2>
-                <p class="section-subtitle">Quatro perspectivas que orientam a construção e o uso da nossa solução de IA
+                <h2 class="section-title" data-translate="perspectives-title">Perspectivas para a Transformação com IA</h2>
+                <p class="section-subtitle" data-translate="perspectives-subtitle">Quatro perspectivas que orientam a construção e o uso da nossa solução de IA
                 </p>
             </div>
 
@@ -239,8 +258,8 @@
                             <i class="fas fa-tools"></i>
                         </div>
                         <a href="#ferramentas">
-                            <h3 class="pilar-title">Ferramentas</h3>
-                            <p class="pilar-description">
+                            <h3 class="pilar-title" data-translate="pillar-tools">Ferramentas</h3>
+                            <p class="pilar-description" data-translate="pillar-tools-desc">
                                 Todas as funcionalidades e soluções estão integradas nesta perspectiva, abrangendo desde
                                 ferramentas de produtividade pessoal até <strong>soluções institucionais completas para
                                     maximizar o valor da IA.</strong>
@@ -259,8 +278,8 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <a href="#governanca">
-                            <h3 class="pilar-title">Governança</h3>
-                            <p class="pilar-description">
+                            <h3 class="pilar-title" data-translate="pillar-governance">Governança</h3>
+                            <p class="pilar-description" data-translate="pillar-governance-desc">
                                 Cuidados com a segurança e privacidade da informação, com qualidade das informações e
                                 instruções passadas à IA e das respotas das ferramentas, e alinhamento institucional em
                                 todo o ciclo de uso da IA.
@@ -279,8 +298,8 @@
                             <i class="fas fa-project-diagram"></i>
                         </div>
                         <a href="#fluxos">
-                            <h3 class="pilar-title">Fluxos</h3>
-                            <p class="pilar-description">
+                            <h3 class="pilar-title" data-translate="pillar-flows">Fluxos</h3>
+                            <p class="pilar-description" data-translate="pillar-flows-desc">
                                 Como a IA nos permite revisar, otimizar e automatizar fluxos e processos internos e
                                 externos, trazendo eficiência e inovação.
                             </p>
@@ -297,8 +316,8 @@
                             </svg>
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3 class="pilar-title">Capacitação</h3>
-                        <p class="pilar-description">
+                        <h3 class="pilar-title" data-translate="pillar-training">Capacitação</h3>
+                        <p class="pilar-description" data-translate="pillar-training-desc">
                             Como a capacitação dos usuários potencializa o uso da IA, promovendo melhores resultados e
                             integração institucional. E porque acreditamos na capacitação.
                         </p>
@@ -312,22 +331,22 @@
     <section id="ferramentas" class="ferramentas">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><i class="fas fa-tools"></i>Ferramentas</h2>
-                <p class="section-subtitle">Funcionalidades integradas para transformar seu trabalho</p>
-                <p class="section-description">
+                <h2 class="section-title" data-translate="tools-title"><i class="fas fa-tools"></i>Ferramentas</h2>
+                <p class="section-subtitle" data-translate="tools-subtitle">Funcionalidades integradas para transformar seu trabalho</p>
+                <p class="section-description" data-translate="tools-description">
                     As ferramentas de IA foram desenvolvidas para atender às necessidades presentes e futuras do MPRS,
                     oferecendo soluções que vão desde a transcrição de áudios até a redação de peças processuais,
                     passando por análises avançadas e chatbots inteligentes.
                 </p>
                 <div class="caracteristicas-conjunto-destaque"
                     style="background:#fff8ed; border-left:5px solid #ff9900; border-radius:8px; padding:1.2rem 1.5rem 1.2rem 2rem; margin-bottom:2rem; box-shadow:0 2px 8px #ff990033;">
-                    <p style="font-size:1.08rem; margin-bottom:1rem; color:#7a5a1e;">
+                    <p style="font-size:1.08rem; margin-bottom:1rem; color:#7a5a1e;" data-translate="tools-platform-description">
                         O conjunto de ferramentas foi projetado para ser muito mais do que um simples sistema: ele
                         representa uma plataforma institucional moderna, colaborativa e preparada para o futuro do
                         Ministério Público e do sistema de justiça.
                     </p>
                 </div>
-                <h3>Conheça os diferenciais que tornam essa solução única e pronta para crescer junto com as
+                <h3 data-translate="tools-differentials">Conheça os diferenciais que tornam essa solução única e pronta para crescer junto com as
                     necessidades da sua instituição:</h3>
                 <div class="caracteristicas-grid">
 
@@ -432,7 +451,7 @@
                     </div>
                 </div>
             </div>
-            <h2>
+            <h2 data-translate="architecture-title">
                 Esquema Geral de Arquitetura da Aplicação
             </h2>
 
@@ -550,11 +569,11 @@
                 <div class="funcionalidade-destaque" data-aos="fade-up">
                     <div class="destaque-content">
                         <div class="destaque-info">
-                            <h3 id="analise-sumarizacao-processos" class="destaque-title">
+                            <h3 id="analise-sumarizacao-processos" class="destaque-title" data-translate="feature-analysis-title">
                                 <i class="fas fa-folder-open"></i>
                                 Análise e Sumarização de Processos
                             </h3>
-                            <p class="destaque-description">
+                            <p class="destaque-description" data-translate="feature-analysis-desc">
                                 Nossa ferramenta principal automatiza a análise de expedientes judiciais e
                                 extrajudiciais,
                                 oferecendo sugestões de encaminhamentos e redação de minutas.
@@ -701,11 +720,11 @@
                 <div class="funcionalidade-destaque" data-aos="fade-up">
                     <div class="destaque-content">
                         <div class="destaque-info">
-                            <h3 id="transcricao-de-videos" class="destaque-title">
+                            <h3 id="transcricao-de-videos" class="destaque-title" data-translate="feature-transcription-title">
                                 <i class="fas fa-video"></i>
                                 Transcrição de Vídeos
                             </h3>
-                            <p class="destaque-description">
+                            <p class="destaque-description" data-translate="feature-transcription-desc">
                                 Com a digitalização dos processos judiciais, deixou de ser tarefa simples acessar o teor
                                 de um depoimento judicial.
                                 Surgia a necessidade de uma ferramenta que pudesse transcrever vídeos de forma rápida e
@@ -812,11 +831,11 @@
                 <div class="funcionalidade-destaque" data-aos="fade-up">
                     <div class="destaque-content">
                         <div class="destaque-info">
-                            <h3 id="apoio" class="destaque-title">
+                            <h3 id="apoio" class="destaque-title" data-translate="feature-support-title">
                                 <i class="fas fa-spell-check"></i>
                                 Apoio
                             </h3>
-                            <p class="destaque-description">
+                            <p class="destaque-description" data-translate="feature-support-desc">
                                 Nossa ferramenta de apoio é projetada para auxiliar os usuários na redação de documentos
                                 jurídicos, oferecendo correção ortográfica e gramatical, sugestões de linguagem simples
                                 e pesquisa jurisprudencial.
