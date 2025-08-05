@@ -407,6 +407,43 @@
 .parceria-timeline {
     background: #f8fafc;
     padding: 80px 0 60px 0;
+    position: relative;
+}
+
+/* Botões de rolagem da timeline */
+.timeline-scroll-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border: 2px solid var(--cor_principal);
+    color: var(--cor_principal);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px #ff990033;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    opacity: 0.92;
+}
+.timeline-scroll-btn:hover {
+    background: var(--cor_principal);
+    color: #fff;
+    border-color: #b85e0b;
+}
+.timeline-scroll-btn.left {
+    left: 0;
+    margin-left: -22px;
+}
+.timeline-scroll-btn.right {
+    right: 0;
+    margin-right: -22px;
 }
 .parceria-intro {
     max-width: 800px;
@@ -425,62 +462,95 @@
 }
 .timeline {
     position: relative;
-    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    max-width: 100%;
     margin: 0 auto;
-    padding-left: 20px;
-    border-left: 4px solid var(--cor_principal);
+    padding: 0 0;
+    border-left: none;
+    gap: 32px;
+    scrollbar-color: var(--cor_principal) #f1f5f9;
+    scrollbar-width: thin;
+    min-height: 180px;
+    height: 220px;
+    align-items: stretch;
 }
 .timeline-event {
     position: relative;
-    margin-bottom: 40px;
-    padding-left: 30px;
+    min-width: 260px;
+    max-width: 320px;
+    margin-bottom: 0;
+    padding: 0 ;
     animation: fadeInUp 1s;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+    border: transparent 2px solid;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(59,130,246,0.07);
+    background: #f1f5f9;
+    overflow: hidden;
+    /* box-shadow: 4px 4px 16px #1e293b !important; */
 }
 .timeline-event:last-child {
     margin-bottom: 0;
 }
 
 .timeline-date {
-    border: 3px solid var(--cor_principal);
-    position: absolute;
-    left: -90px;
-    top: 8px;
-    font-size: 1.1rem;
-    color: var(--cor_principal);
+    background: var(--cor_principal);
+    color: #fff;
     font-weight: 600;
-    background: #e0e7ef;
-    padding: 6px 16px;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(59,130,246,0.07);
+    font-size: 1.1rem;
+    /* border-radius: 10px ; */
+    padding: 12px 16px 10px 16px;
+    margin-bottom: 0;
     min-width: 80px;
-    max-width: 120px;
+    max-width: 100%;
     text-align: center;
+    min-height: 36px;
+    height: 48px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.2;
+    border: none;
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 2;
 }
 .timeline-content {
-    background: white;
-    border-radius: 12px;
-    padding: 18px 22px;
-    box-shadow: 0 4px 18px rgba(59,130,246,0.07);
-    color: #334155;
-    font-size: 1.08rem;
+    background: transparent;
+    border-radius: 20px;
+    padding: 22px 22px 28px 22px;
+    color: #475569;
+    font-size: 1.1rem;
     transition: box-shadow 0.3s;
+    min-height: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+    flex: 1 1 auto;
 }
-.timeline-event:hover .timeline-content {
+.timeline-event:hover {
     box-shadow: 0 8px 32px rgba(59,130,246,0.13);
     border: var(--cor_principal) 2px solid;
-    background: #f1f5f9;
+    background: white;
 }
 @media (max-width: 900px) {
     .timeline {
         padding-left: 0;
         border-left: none;
-    }
-    .timeline-date {
-        position: static;
-        display: block;
-        margin-bottom: 6px;
-        left: 0;
-        top: 0;
+        max-width: 100vw;
     }
     .timeline-event {
         padding-left: 0;
@@ -759,7 +829,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pilares Section */
 .pilares {
-    padding: 100px 0;
+    padding: 0;
     background: white;
 }
 
@@ -1266,3 +1336,7 @@ h1, h2, h3, h4, h5, h6 {
     /* color: #ff9900; */
     margin-bottom: 1rem;
 }   
+
+.future {
+    opacity: 70%;
+}

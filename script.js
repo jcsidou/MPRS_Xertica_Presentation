@@ -1,3 +1,11 @@
+// Função para rolar a timeline horizontalmente
+function scrollTimeline(direction) {
+  const timeline = document.querySelector('.timeline');
+  if (timeline) {
+    const scrollAmount = timeline.offsetWidth * 0.7;
+    timeline.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+}
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle

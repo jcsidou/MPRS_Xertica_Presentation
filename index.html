@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPRS & Xertica.ai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
 <body>
     <!-- Header -->
     <header class="header">
@@ -69,7 +76,7 @@
 
     <!-- Parceria e Linha do Tempo -->
     <section id="parceria-timeline" class="parceria-timeline">
-        <div class="container">
+        <div class="container" style="position:relative;">
             <div class="parceria-intro" data-aos="fade-up">
                 <h2>Como surgiu a parceria MPRS & Xertica.ai</h2>
                 <p>
@@ -81,6 +88,7 @@
                     público para o desenvolvimento conjunto de soluções inovadoras.
                 </p>
             </div>
+            <button class="timeline-scroll-btn left" onclick="scrollTimeline(-1)" aria-label="Rolar para a esquerda"><i class="fas fa-chevron-left"></i></button>
             <div class="timeline" data-aos="fade-up">
                 <div class="timeline-event">
                     <div class="timeline-date">Ago/2023</div>
@@ -132,16 +140,56 @@
                     <div class="timeline-date">Ago/2025</div>
                     <div class="timeline-content">Lançamento da análise de expedientes extrajudiciais.</div>
                 </div>
-            </div>
-
-            <hr style="margin: 20px">
-            <div class="timeline timeline-future" data-aos="fade-up">
-                <div class="timeline-event">
+                <div class="timeline-event future">
                     <div class="timeline-date">Set/2025</div>
                     <div class="timeline-content">Expansão para o segundo grau de jurisdição.</div>
                 </div>
+
             </div>
+            <button class="timeline-scroll-btn right" onclick="scrollTimeline(1)" aria-label="Rolar para a direita"><i class="fas fa-chevron-right"></i></button>
         </div>
+    </section>
+
+    <section id="necessidades" class="necessidades">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conclusões da Comissão</h2>
+                <p class="section-subtitle">A diferença entre as necessidades do membro e da instituição</p>
+                <p class="section-description">
+                    A mais candente conclusão da comissão, foi de que <strong> as necessidades da instituição são mais amplas que as necessidades do membros</strong>.
+                </p>
+            </div>
+            <svg id="svg-necessidades" viewBox="0 0 1000 350" width="98%" height="350px" style="max-width:1000px;min-width:320px;">
+                <g font-family="Inter,sans-serif" font-size="16" text-anchor="middle">
+                    <g>
+                        <ellipse cx="500" cy="175" rx="475" ry="170" fill="#ff9900" opacity="0.8" />
+                        <ellipse cx="500" cy="235" rx="300" ry="100" fill="#ff9900" opacity="0.7" />
+
+                    </g>
+                    <!-- Institucionais -->
+                    <text x="500" y="45" fill="#fff" font-size="24" font-weight="bold">Necessidades institucionais</text>
+                    <text x="400" y="70" fill="#fff" font-size="16" font-weight="bold">Segurança</text>
+                    <text x="600" y="70" fill="#fff" font-size="16" font-weight="bold">Privacidade</text>
+                    <text x="300" y="95" fill="#fff" font-size="16" font-weight="bold">Uniformidade</text>
+                    <text x="500" y="95" fill="#fff" font-size="16" font-weight="bold">Qualidade</text>
+                    <text x="700" y="95" fill="#fff" font-size="16" font-weight="bold">Coleta de Indicadores</text>
+                    <text x="350" y="120" fill="#fff" font-size="16" font-weight="bold">Otimização de fluxos</text>
+                    <text x="650" y="120" fill="#fff" font-size="16" font-weight="bold">Redução da dependência de mão de obra</text>
+                    <text x="200" y="120" fill="#fff" font-size="16" font-weight="bold">Estrutura de TI</text>
+                    <text x="500" y="120" fill="#fff" font-size="16" font-weight="bold">(...)</text>
+                    <!-- Individuais -->
+                    <text x="500" y="170" fill="#fff" font-size="24" font-weight="bold">Necessidades individuais</text>
+                    <text x="500" y="195" fill="#fff" font-size="16" font-weight="bold">Transcrição de Videos</text>
+                    <text x="500" y="220" fill="#fff" font-size="16" font-weight="bold">Sumarização de Documentos</text>
+                    <text x="500" y="245" fill="#fff" font-size="16" font-weight="bold">Redação de Peças</text>
+                    <text x="500" y="270" fill="#fff" font-size="16" font-weight="bold">Pesquisa de Jurisprudência</text>
+                    <text x="500" y="295" fill="#fff" font-size="16" font-weight="bold">Organização do Trabalho</text>
+                    <text x="500" y="320" fill="#fff" font-size="16" font-weight="bold">(...)</text>
+
+                </g>
+            </svg>
+        </div>
+
     </section>
 
     <!-- Pilares Section -->
@@ -260,7 +308,6 @@
     </section>
 
     <!-- Ferramentas Section -->
-
     <section id="ferramentas" class="ferramentas">
         <div class="container">
             <div class="section-header">
@@ -282,6 +329,18 @@
                 <h3>Conheça os diferenciais que tornam essa solução única e pronta para crescer junto com as
                     necessidades da sua instituição:</h3>
                 <div class="caracteristicas-grid">
+
+                    <div class="caracteristica-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="beneficio-content">
+                            <h4>Alta Escalabilidade e Desempenho</h4>
+                            <p>Arquitetura em <span style="font-style:italic">cloud computing</span> robusta, preparada
+                                para crescer conforme a demanda, garantindo desempenho e disponibilidade elevados mesmo
+                                em cenários de grande volume de dados e acessos simultâneos.</p>
+                        </div>
+                    </div>
                     <div class="caracteristica-card" data-aos="fade-up">
                         <div class="caracteristica-icon">
                             <i class="fas fa-users"></i>
@@ -295,13 +354,13 @@
                     </div>
                     <div class="caracteristica-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="caracteristica-icon">
-                            <i class="fas fa-cloud"></i>
+                            <i class="fas fa-file-signature"></i>
                         </div>
                         <div class="beneficio-content">
-                            <h4>Alta Escalabilidade e Desempenho</h4>
-                            <p>Arquitetura em <span style="font-style:italic">cloud computing</span> robusta, preparada
-                                para crescer conforme a demanda, garantindo desempenho e disponibilidade elevados mesmo
-                                em cenários de grande volume de dados e acessos simultâneos.</p>
+                            <h4>Contratação Simplificada</h4>
+                            <p>As ferramentas foram concebidas para facilitar a contratação por outros Ministérios Públicos
+                                e instituições, por inexigibilidade de licitação ou contratos de <strong>multicloud</strong>,
+                                permitindo uma rápida</p>
                         </div>
                     </div>
                     <div class="caracteristica-card" data-aos="fade-up" data-aos-delay="200">
@@ -375,6 +434,7 @@
             <h2>
                 Esquema Geral de Arquitetura da Aplicação
             </h2>
+
             <!-- Animação do Fluxo de Processo -->
             <div class="fluxo-processo-animacao" style="display:flex;justify-content:center;margin-bottom:2rem;">
                 <svg id="svg-fluxo-animado" viewBox="0 0 1000 350" width="98%" height="350px"
@@ -479,6 +539,12 @@
                         marker-end="url(#arrow)" />
                 </svg>
             </div>
+            <!-- <h2>
+                Uma obra em construção
+            </h2>
+                <div style="width:100%;display:flex;justify-content:center;margin:24px 0;">
+                <img src="images/lego.png" alt="Lego" style="max-width:640px;width:100%;height:auto;display:block;" />
+            </div> -->
             <section id="funcionalidades" class="funcionalidades">
                 <div class="funcionalidade-destaque" data-aos="fade-up">
                     <div class="destaque-content">

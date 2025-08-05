@@ -1,0 +1,38 @@
+<section id="necessidades" class="necessidades">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Conclusões da Comissão</h2>
+            <p class="section-subtitle">A diferença entre as necessidades do membro e da instituição</p>
+            <p class="section-description">
+                A mais candente conclusão da comissão, foi de que <strong> as necessidades da instituição são mais amplas que as necessidades do membros</strong>.
+            </p>
+        </div>
+        <svg id="svg-necessidades" viewBox="0 0 1000 350" width="98%" height="350px" style="max-width:1000px;min-width:320px;">
+            <g font-family="Inter,sans-serif" font-size="16" text-anchor="middle">
+                <g>
+                    <ellipse cx="500" cy="175" rx="475" ry="170" fill="#ff9900" opacity="0.8" />
+                    <ellipse cx="500" cy="235" rx="300" ry="100" fill="#ff9900" opacity="0.7" />
+                </g>
+                <!-- Institucionais -->
+                <text x="500" y="45" fill="#fff" font-size="24" font-weight="bold">Necessidades institucionais</text>
+                <text x="400" y="70" fill="#fff" font-size="16" font-weight="bold">Segurança</text>
+                <text x="600" y="70" fill="#fff" font-size="16" font-weight="bold">Privacidade</text>
+                <text x="300" y="95" fill="#fff" font-size="16" font-weight="bold">Uniformidade</text>
+                <text x="500" y="95" fill="#fff" font-size="16" font-weight="bold">Qualidade</text>
+                <text x="700" y="95" fill="#fff" font-size="16" font-weight="bold">Coleta de Indicadores</text>
+                <text x="350" y="120" fill="#fff" font-size="16" font-weight="bold">Otimização de fluxos</text>
+                <text x="650" y="120" fill="#fff" font-size="16" font-weight="bold">Redução da dependência de mão de obra</text>
+                <text x="200" y="120" fill="#fff" font-size="16" font-weight="bold">Estrutura de TI</text>
+                <text x="500" y="120" fill="#fff" font-size="16" font-weight="bold">(...)</text>
+                <!-- Individuais -->
+                <text x="500" y="170" fill="#fff" font-size="24" font-weight="bold">Necessidades individuais</text>
+                <text x="500" y="195" fill="#fff" font-size="16" font-weight="bold">Transcrição de Videos</text>
+                <text x="500" y="220" fill="#fff" font-size="16" font-weight="bold">Sumarização de Documentos</text>
+                <text x="500" y="245" fill="#fff" font-size="16" font-weight="bold">Redação de Peças</text>
+                <text x="500" y="270" fill="#fff" font-size="16" font-weight="bold">Pesquisa de Jurisprudência</text>
+                <text x="500" y="295" fill="#fff" font-size="16" font-weight="bold">Organização do Trabalho</text>
+                <text x="500" y="320" fill="#fff" font-size="16" font-weight="bold">(...)</text>
+            </g>
+        </svg>
+    </div>
+</section>
