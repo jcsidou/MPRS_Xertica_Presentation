@@ -1,3 +1,448 @@
+/* Carrossel de Benefícios */
+.beneficios-carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+
+.beneficios-carousel-container .carousel-btn-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+.beneficios-carousel-container .carousel-btn-wrapper-left {
+  left: 0;
+}
+/* Tipografia: tentativa de uso da fonte NEtron com fallback */
+@font-face {
+    font-family: 'Netron';
+    src: url('fonts/Netron.woff2') format('woff2'),
+             url('fonts/Netron.ttf') format('truetype'),
+             local('Netron'), local('Netron-Regular');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-ne: 'Netron', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    --cor_principal: #ff9900;
+}
+
+/* Barra de título: texto central AURORA */
+.nav-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-ne) !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+    color: #b85e0b !important; 
+    font-size: 2.3rem !important; /* dobrar tamanho aproximado */
+    background: linear-gradient(135deg, #b85e0b, var(--cor_principal)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-transform: uppercase;
+    pointer-events: none;
+    display: inline-block !important;
+    z-index: 1100 !important;
+}
+
+/* Hero: primeira linha com NEtron */
+.hero-title {
+    text-align: center;
+    line-height: 1.0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-title-main.hero-neutron {
+    display: block;
+    font-family: var(--font-ne) !important;
+    font-weight: 700 !important;
+    /* dobrar tamanho: maior mínimo e máximo */
+    font-size: clamp(5.2rem, 16vw, 10rem) !important;
+    letter-spacing: 6px;
+    margin-bottom: 0.2rem;
+    background: linear-gradient(135deg, #b85e0b, var(--cor_principal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Forçar o título do hero a ocupar ambas as colunas e ficar perfeitamente centralizado */
+.hero-title {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+/* Ajuste para o header em sobreposição e garantir leitura do gradiente */
+.header {
+    background: rgba(255,255,255,0.95) !important;
+    z-index: 1200 !important;
+}
+.hero-title-sub {
+    display: block;
+    font-size: 1.15rem;
+    color: #6b7280;
+}
+
+@media (max-width: 700px) {
+    .nav-title { font-size: 1rem; }
+    .hero-title-main.hero-neutron { font-size: clamp(2.2rem, 10vw, 3rem); letter-spacing: 2px; }
+}
+.beneficios-carousel-container .carousel-btn-wrapper-right {
+  right: 0;
+}
+
+.beneficios-carousel-grid {
+  flex: 1 1 0%;
+  display: flex;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  scroll-behavior: smooth;
+  gap: 32px;
+  width: 100%;
+  padding: 24px 64px 32px 64px;
+  scroll-snap-type: x mandatory;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+}
+/* Ajuste para os cards do carrossel de benefícios */
+.beneficios-carousel-grid .beneficio-item {
+  min-width: 300px;
+  max-width: 350px;
+  flex: 0 0 80vw;
+  scroll-snap-align: center;
+  margin: 0;
+  border-left: 5px solid transparent;
+  transition: border-color 0.2s;
+  z-index: 1;
+}
+.beneficios-carousel-grid .beneficio-item:hover {
+  border-left: 5px solid #ff9900;
+}
+@media (max-width: 900px) {
+  .beneficios-carousel-grid .beneficio-item {
+    min-width: 85vw;
+    max-width: 90vw;
+    flex: 0 0 85vw;
+  }
+  .beneficios-carousel-grid {
+    gap: 16px;
+    padding: 0 24px;
+  }
+}
+.beneficios-carousel-grid::-webkit-scrollbar {
+  display: none !important;
+}
+.funcionalidades-carousel-grid .funcionalidade-card ul li {
+  text-align: justify;
+}
+/* Carrossel de Funcionalidades */
+.funcionalidades-carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.funcionalidades-carousel-container .carousel-btn-wrapper {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Centraliza o indicador de posição abaixo do carrossel de funcionalidades */
+.funcionalidades-carousel-wrapper .carousel-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0 0;
+  width: 100%;
+}
+.funcionalidades-carousel-grid {
+  flex: 1 1 0%;
+  display: flex;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  scroll-behavior: smooth;
+  gap: 32px;
+  width: 100%;
+  padding: 24px 64px 32px 64px;
+  scroll-snap-type: x mandatory;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+}
+}
+
+/* Botões laterais fora da área dos cards */
+.funcionalidades-carousel-container .carousel-btn-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.funcionalidades-carousel-container .carousel-btn-wrapper-left {
+  left: 0;
+}
+.funcionalidades-carousel-container .carousel-btn-wrapper-right {
+  right: 0;
+}
+.funcionalidades-carousel-container .carousel-btn {
+  position: static;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .funcionalidades-carousel-container {
+    padding: 0 0.5rem;
+  }
+  .funcionalidades-carousel-container .carousel-btn-wrapper {
+    width: 2.5rem;
+  }
+}
+}
+.funcionalidades-carousel-grid {
+  display: flex;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  scroll-behavior: smooth;
+  gap: 32px;
+  width: 100%;
+  padding: 24px 64px 32px 64px;
+  scroll-snap-type: x mandatory;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+}
+.funcionalidades-carousel-grid::-webkit-scrollbar {
+  display: none !important;
+}
+/* Cards de funcionalidades agora seguem o padrão dos cards de características, mas são mais largos */
+/* Cards de funcionalidades agora seguem o padrão dos cards de características, mas são mais largos */
+.funcionalidades-carousel-grid .funcionalidade-card {
+  min-width: 360px;
+  max-width: 380px;
+  flex: 0 0 360px;
+  border-left: 5px solid transparent;
+  transition: border-color 0.2s;
+}
+.funcionalidades-carousel-grid .funcionalidade-card:hover {
+  border-left: 5px solid #ff9900;
+}
+/* Aparência das listas nos cards de funcionalidades */
+.funcionalidades-carousel-grid .funcionalidade-card ul {
+  margin: 0.7em 0 0.2em 0;
+  padding-left: 1.2em;
+  list-style: none;
+}
+.funcionalidades-carousel-grid .funcionalidade-card ul li {
+  position: relative;
+  color: #475569;
+  font-size: 1.04rem;
+  margin-bottom: 0.35em;
+  padding-left: 1.2em;
+}
+.funcionalidades-carousel-grid .funcionalidade-card ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: #ff9900;
+  font-size: 1.2em;
+  line-height: 1;
+  top: 0.1em;
+}
+@media (max-width: 900px) {
+  .funcionalidades-carousel-grid .funcionalidade-card {
+    min-width: 85vw;
+    max-width: 95vw;
+    flex: 0 0 85vw;
+  }
+}
+/* Correções finais para carrossel de características */
+.caracteristicas-carousel-grid {
+  overflow-y: visible !important;
+  padding: 24px 64px 32px 64px !important;
+}
+.carousel-btn {
+  background: rgba(255,255,255,0.2) !important;
+  box-shadow: none !important;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s !important;
+}
+.carousel-btn:hover, .carousel-btn:focus {
+  background: #fff !important;
+  box-shadow: 0 4px 18px #ff990066, 0 2px 8px #ff990033 !important;
+  transform: scale(1.12) !important;
+  z-index: 4 !important;
+}
+@media (max-width: 900px) {
+  .carousel-btn:hover, .carousel-btn:focus {
+    background: rgba(255,255,255,0.7) !important;
+    box-shadow: 0 2px 8px #ff990033 !important;
+    transform: scale(1.08) !important;
+  }
+}
+/* Carrossel de Características */
+.caracteristicas-carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.caracteristicas-carousel-grid {
+  display: flex;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  scroll-behavior: smooth;
+  gap: 32px;
+  width: 100%;
+  padding: 0 64px;
+  scroll-snap-type: x mandatory;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+}
+.caracteristicas-carousel-grid::-webkit-scrollbar {
+  display: none !important;
+}
+.caracteristicas-carousel-grid .caracteristica-card {
+  min-width: 300px;
+  max-width: 350px;
+  flex: 0 0 80vw;
+  scroll-snap-align: center;
+  margin: 0;
+  border-left: 5px solid transparent;
+  transition: border-color 0.2s;
+  z-index: 1;
+}
+.caracteristicas-carousel-grid .caracteristica-card:hover {
+  border-left: 5px solid #ff9900;
+}
+
+@media (min-width: 1100px) {
+  .caracteristicas-carousel-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .caracteristicas-carousel-grid {
+    padding: 0 120px;
+  }
+  .carousel-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 3;
+  }
+  .carousel-btn-left {
+    left: 24px;
+  }
+  .carousel-btn-right {
+    right: 24px;
+  }
+}
+
+/* Botões transparentes, exceto no hover */
+.carousel-btn {
+  background: rgba(255,255,255,0.2);
+  box-shadow: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.carousel-btn:hover, .carousel-btn:focus {
+  background: #fff;
+  box-shadow: 0 2px 8px #ff990033;
+}
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .caracteristicas-carousel-grid .caracteristica-card {
+    min-width: 85vw;
+    max-width: 90vw;
+    flex: 0 0 85vw;
+  }
+  .caracteristicas-carousel-grid {
+    gap: 16px;
+    padding: 0 24px;
+  }
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #ff990033;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  color: var(--cor_principal);
+  font-size: 1.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.carousel-btn-left {
+  left: 0;
+}
+.carousel-btn-right {
+  right: 0;
+}
+.carousel-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0 0;
+}
+.carousel-pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  transition: background 0.2s;
+}
+.carousel-pagination-dot.active {
+  background: var(--cor_principal);
+}
 /* Barra de rolagem com cor principal */
 ::-webkit-scrollbar-thumb {
   background: var(--cor_principal) !important;
@@ -718,7 +1163,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pilares Section */
 .pilares {
-    padding: 100px 0;
+    /* padding: 100px 0; */
     background: white;
 }
 
@@ -769,7 +1214,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Funcionalidades Section */
 .funcionalidades {
-    padding: 100px 0;
+    /* padding: 100px 0; */
     background: #f8fafc;
 }
 
@@ -928,7 +1373,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Benefícios Section */
 .beneficios {
-    padding: 100px 0;
+    /* padding: 100px 0;s */
     background: white;
 }
 
