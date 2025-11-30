@@ -86,7 +86,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (grid) {
     grid.addEventListener('scroll', updateBeneficiosPagination);
     window.addEventListener('resize', updateBeneficiosPagination);
-    setTimeout(updateBeneficiosPagination, 300);
+    // ensure the carousel starts at the left edge so the first card is fully visible
+    grid.scrollTo({ left: 0 });
+    setTimeout(() => { updateBeneficiosPagination(); grid.scrollTo({ left: 0 }); }, 300);
   }
 });
 // === Carrossel de Governança ===
